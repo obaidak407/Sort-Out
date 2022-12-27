@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" tools:context=".Accounts.AdminSecurityGardCallLoginActivity">
+    <TextView android:id="@+id/text" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:text="Security Gard Call Admin Login" android:textAlignment="center" android:textColor="@color/black" android:textSize="30sp"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/text">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <LinearLayout android:id="@+id/one" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:layout_marginStart="10dp" android:layout_marginTop="150dp" android:layout_marginEnd="10dp" android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="36dp" android:hint="Enter ID" app:boxStrokeColor="@color/black">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/stdLoginid" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" android:singleLine="true" android:textColor="@color/black" android:textSize="15sp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:hint="Password" app:boxStrokeColor="@color/black" app:passwordToggleEnabled="true">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/stdpassword" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword" android:singleLine="true" android:textColor="@color/black" android:textSize="15sp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <RelativeLayout android:id="@+id/second" android:layout_width="match_parent" android:layout_height="40dp" android:layout_below="@id/one" android:layout_marginStart="10dp" android:layout_marginTop="10dp" android:layout_marginEnd="10dp" android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/secForgetPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Forget Password"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSignIn" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/second" android:layout_marginStart="10dp" android:layout_marginTop="10dp" android:layout_marginEnd="10dp" android:layout_marginBottom="10dp" android:backgroundTint="@color/colorPrimary" android:elevation="10dp" android:paddingStart="20dp" android:paddingTop="15dp" android:paddingEnd="20dp" android:paddingBottom="20dp" android:text="Sign In" android:textColor="@color/black" app:cornerRadius="10dp"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
