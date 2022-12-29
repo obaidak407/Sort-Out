@@ -6,122 +6,16 @@
     tools:context=".Home.HomeActivity"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.110000014"
-        app:srcCompat="@drawable/aa" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65" />
-
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register Your Complaints"
-        android:textColor="@color/colorBlack"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.479"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <TextView
-        android:id="@+id/desc"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="45dp"
-        android:gravity="center"
-        android:text="This is random text taking from lorem ipsum tesing puspose"
-        app:layout_constraintBottom_toBottomOf="@id/ind2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title"
-        app:layout_constraintVertical_bias="0.3" />
-
-    <Button
-        android:id="@+id/btnstudent"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="-100dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="80dp"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:text="Student Login"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ind2" />
-
-    <Button
-        android:id="@+id/btnsecurity"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="-100dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:text="Security Login"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnstudent" />
-
-    <Button
-        android:id="@+id/btnadmin"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="-100dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:text="Admin Login"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnstudent" />
-
     <ImageView
         android:id="@+id/ind1"
         android:layout_width="15dp"
         android:layout_height="15dp"
-        android:layout_marginTop="10dp"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/btnstudent"
         app:layout_constraintEnd_toStartOf="@+id/ind2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/desc"
         app:srcCompat="@drawable/seleted" />
 
     <ImageView
@@ -134,6 +28,72 @@
         app:layout_constraintStart_toEndOf="@+id/ind1"
         app:layout_constraintTop_toTopOf="@+id/ind1"
         app:srcCompat="@drawable/seleted" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="221dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/top_logo" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="45dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/info" />
+
+    <ImageButton
+        android:id="@+id/btnstudent"
+        android:layout_width="377dp"
+        android:layout_height="111dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorWhite"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:srcCompat="@drawable/student_login" />
+
+    <ImageButton
+        android:id="@+id/btnsecurity"
+        android:layout_width="377dp"
+        android:layout_height="111dp"
+        android:background="@color/colorWhite"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnstudent"
+        app:srcCompat="@drawable/security_login" />
+
+    <ImageButton
+        android:id="@+id/btnadmin"
+        android:layout_width="377dp"
+        android:layout_height="111dp"
+        android:background="@color/colorWhite"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnsecurity"
+        app:srcCompat="@drawable/admin_login" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="413dp"
+        android:layout_height="276dp"
+        android:scaleType="fitEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bottom_design" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

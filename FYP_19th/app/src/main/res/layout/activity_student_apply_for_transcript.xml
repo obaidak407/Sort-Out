@@ -602,13 +602,6 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <TextView
-                        android:id="@+id/imagetrans"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Upload Image of transcript" />
-
-                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Upload Educational Documents"
@@ -623,13 +616,6 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Following Document are required to attach with application form:"
-                            android:textColor="@color/black"
-                            android:textSize="12sp" />
 
                         <TextView
                             android:layout_width="match_parent"
