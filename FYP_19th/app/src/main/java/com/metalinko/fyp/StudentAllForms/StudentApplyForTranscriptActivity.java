@@ -314,15 +314,6 @@ public class StudentApplyForTranscriptActivity extends AppCompatActivity {
         });
 
 
-        binding.imagetrans.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-
-                selectImage();
-            }
-        });
 
 
     }

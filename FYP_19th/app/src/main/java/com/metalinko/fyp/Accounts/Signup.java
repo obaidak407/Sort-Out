@@ -20,7 +20,7 @@ import com.metalinko.fyp.databinding.ActivitySignupBinding;
 public class Signup extends AppCompatActivity {
         ActivitySignupBinding binding;
     private FirebaseAuth mAuth;
-    private String email , password;
+    private String email , password, recheck;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +38,7 @@ public class Signup extends AppCompatActivity {
 
                 email =  binding.stdLoginEmail.getText().toString();
                 password = binding.stdpassword.getText().toString();
+                recheck = binding.stdpasswordcheck.getText().toString();
 
 
                 if(email.isEmpty())
@@ -48,6 +49,10 @@ public class Signup extends AppCompatActivity {
                 else if(password.isEmpty())
                 {
                     binding.stdpassword.setError("Enter Password");
+                }
+                else if(recheck.isEmpty())
+                {
+                    binding.stdpasswordcheck.setError("Re-Enter Password");
                 }
                 else
                 {

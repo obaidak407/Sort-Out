@@ -19,7 +19,7 @@ import com.metalinko.fyp.databinding.ActivitySignupBinding;
 
 public class SecuritySignup extends AppCompatActivity {
         ActivitySecuritySignupBinding binding;
-    private String user_id , password;
+    private String user_id , password,check;
     FirebaseDatabase firebaseDatabase;
     private DatabaseReference mDatabase;
     @Override
@@ -39,6 +39,7 @@ public class SecuritySignup extends AppCompatActivity {
 
                 user_id = binding.stdsignupid.getText().toString();
                 password = binding.stdpassword.getText().toString();
+                check = binding.stdpasswordcheck.getText().toString();
 
 
                 if (user_id.isEmpty()) {
@@ -46,51 +47,53 @@ public class SecuritySignup extends AppCompatActivity {
                     binding.stdsignupid.setError("Please Enter User id");
                 } else if (password.isEmpty()) {
 
-                    binding.stdpassword.setError("Please Enter User id");
+                    binding.stdpassword.setError("Please Enter Password");
+
+                }  else if (check.isEmpty()|| check.equals(password)) {
+
+                    binding.stdpasswordcheck.setError("Password Doesnot match");
 
                 } else {
+                    SecurityLoginModel securityLoginModel = new SecurityLoginModel(user_id, password);
+
+
+
+                    mDatabase.push().setValue(securityLoginModel).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+
+
+                            if(task.isSuccessful())
+                            {
+
+
+                                Toast.makeText(SecuritySignup.this, "Done", Toast.LENGTH_SHORT).show();
+
+                                Intent intent = new Intent(getApplicationContext() , SecurityLogin.class);
+                                startActivity(intent);
+                                finish();
+
+
+
+
+                            }
+                            else
+                            {
+                                Toast.makeText(SecuritySignup.this, "Error", Toast.LENGTH_SHORT).show();
+                            }
+
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+
+
+                            Toast.makeText(SecuritySignup.this, ": "+e, Toast.LENGTH_SHORT).show();
+                        }
+                    });
                 }
 
-                SecurityLoginModel securityLoginModel = new SecurityLoginModel(
-                        user_id,
-                        password
 
-                );
-
-
-
-                mDatabase.push().setValue(securityLoginModel).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-
-
-                        if(task.isSuccessful())
-                        {
-
-
-                            Toast.makeText(SecuritySignup.this, "Done", Toast.LENGTH_SHORT).show();
-
-                            Intent intent = new Intent(getApplicationContext() , SecurityLogin.class);
-                            startActivity(intent);
-
-
-
-
-                        }
-                        else
-                        {
-                            Toast.makeText(SecuritySignup.this, "Error", Toast.LENGTH_SHORT).show();
-                        }
-
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-
-
-                        Toast.makeText(SecuritySignup.this, ": "+e, Toast.LENGTH_SHORT).show();
-                    }
-                });
 
 
 
@@ -106,4 +109,10 @@ public class SecuritySignup extends AppCompatActivity {
         });
     }
 
+    public void nex(View view) {
+
+        Intent intent = new Intent(getApplicationContext() , SecurityLogin.class);
+        startActivity(intent);
+        finish();
+    }
 }
