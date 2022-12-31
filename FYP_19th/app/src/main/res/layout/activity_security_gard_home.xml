@@ -1,190 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:contentDescription="Scroll View"
     tools:context=".SecurityGuarfHome.SecurityGardHomeActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <ImageView
+        android:id="@+id/ind1"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/seccomplaintsbox"
+        app:layout_constraintEnd_toStartOf="@+id/ind2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/seleted" />
+
+    <ImageView
+        android:id="@+id/ind2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/ind1"
+        app:layout_constraintStart_toEndOf="@+id/ind1"
+        app:layout_constraintTop_toTopOf="@+id/ind1"
+        app:srcCompat="@drawable/seleted" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="220dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/top_logo" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:onClick="back"
+        android:layout_width="45dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="348dp"
+        android:scaleType="fitCenter"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <ImageButton
+        android:id="@+id/seccomplaintsbox"
+        android:layout_width="377dp"
+        android:layout_height="111dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorWhite"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:srcCompat="@drawable/complaint_form" />
+
+    <ImageButton
+        android:id="@+id/stdtranscript"
+        android:layout_width="377dp"
+        android:layout_height="111dp"
+        android:background="@color/colorWhite"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seccomplaintsbox"
+        app:srcCompat="@drawable/duty_schedule" />
+
+    <ImageButton
+        android:id="@+id/stdbuscard"
+        android:layout_width="377dp"
+        android:layout_height="111dp"
+        android:background="@color/colorWhite"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stdtranscript"
+        app:srcCompat="@drawable/guard_call" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="413dp"
+        android:layout_height="276dp"
+        android:scaleType="fitEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/guard_bg" />
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
 
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/secback">
-
-            </ImageView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:padding="10dp"
-                android:text="Categories"
-                android:textAllCaps="true"
-                android:textSize="25sp" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp">
-
-                <RelativeLayout
-                    android:id="@+id/seccomplaintsbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/round_bk2">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="25dp"
-                        android:text="Complaint"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="25dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="20dp"
-                        android:layout_marginBottom="20dp"
-                        android:text="Click here and Register your Complaints."
-                        android:textColor="@color/black"
-                        android:textSize="12sp" />
-
-
-                </RelativeLayout>
-
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="-30dp"
-                    android:src="@drawable/complaint" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp">
-
-                <RelativeLayout
-                    android:id="@+id/stdtranscript"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/comp_back">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:padding="25dp"
-                        android:text="Check Your Duty \nSchedule"
-                        android:textColor="@color/white"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="20dp"
-                        android:layout_marginBottom="20dp"
-
-                        android:text="Click here and check your duty Schedule."
-                        android:textColor="@color/white"
-                        android:textSize="12sp" />
-
-
-                </RelativeLayout>
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="120dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginTop="-10dp"
-                    android:src="@drawable/secback" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp">
-
-                <RelativeLayout
-                    android:id="@+id/stdbuscard"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/buscard_bg">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="25dp"
-                        android:text="Call Another \nGuard"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="25dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="20dp"
-                        android:layout_marginBottom="20dp"
-                        android:text="Click here and call another Guards."
-                        android:textColor="@color/black"
-                        android:textSize="12sp" />
-
-
-                </RelativeLayout>
-
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="140dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="-10dp"
-                    android:src="@drawable/seccal" />
-
-            </RelativeLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
